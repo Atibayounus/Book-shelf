@@ -1,0 +1,222 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #062f2f;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: rgb(254, 255, 255);
+}
+
+.app {
+  max-width: 640px;
+  margin: 40px auto;
+  padding: 0 16px;
+}
+
+/*  the HEADER partt */
+
+
+.header h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.header p {
+  margin: 4px 0 24px;
+  color: #7fd8cf;
+}
+
+/* the ADD FORM Partt*/
+
+.book-form {
+  background: #12403f;
+  border: 1px solid #0e2f2e;
+  border-radius: 10px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.book-form h2 {
+  margin: 0 0 12px;
+  font-size: 18px;
+}
+
+.form-row {
+  display: flex;
+  gap: 12px;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 120px;
+}
+
+.form-group label {
+  font-size: 13px;
+  margin-bottom: 4px;
+  color: #a9ece4;
+}
+
+.form-group input {
+  padding: 8px 10px;
+  border: 1px solid #efecec;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.form-group input:focus,
+.filter-btn:focus,
+.add-btn:focus,
+.remove-btn:focus,
+.book-check input:focus {
+  outline: 2px solid #2dd4bf;
+  outline-offset: 2px;
+}
+
+.add-btn {
+  background-color: #0d9488;
+  color: #fff;
+  border: none;
+  padding: 9px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  height: 38px;
+}
+
+.add-btn:hover {
+  background-color: #0b7a70;
+}
+
+.error-msg {
+  color: #ff8a80;
+  font-size: 13px;
+  margin: 10px 0 0;
+}
+
+/* STEP 3 - SUMMARY */
+.shelf-stats {
+  background: #0e3d3a;
+  border: 1px solid #1f5f58;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 14px;
+  margin-bottom: 12px;
+  color: #e6fffa;
+}
+
+.shelf-stats .dot {
+  margin: 0 8px;
+  color: #5fbdb0;
+}
+
+/* STEP 4 - FILTERS */
+.filters {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.filter-btn {
+  padding: 6px 14px;
+  border: 1px solid #1f5f58;
+  background: #0e3d3a;
+  color: #cffafe;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.filter-btn.active {
+  background-color: #14b8a6;
+  color: #062f2f;
+  border-color: #14b8a6;
+  font-weight: 600;
+}
+
+/* The BOOK LIST wala part */
+
+.book-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.book-card {
+  background: #0e3d3a;
+  border: 1px solid #1f5f58;
+  border-radius: 8px;
+  padding: 12px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.book-check {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.book-title {
+  margin: 0;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.book-title.finished {
+  text-decoration: line-through;
+  color: #7fd8cf;
+}
+
+.book-meta {
+  margin: 2px 0 0;
+  font-size: 13px;
+  color: #a9ece4;
+}
+
+.remove-btn {
+  background: transparent;
+  border: 1px solid #ff8a80;
+  color: #ff8a80;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.remove-btn:hover {
+  background-color: rgba(255, 138, 128, 0.15);
+}
+
+.empty-msg {
+  text-align: center;
+  color: #5fbdb0;
+  padding: 20px;
+}
+
+/* Adding Mobile media query */
+
+@media (max-width: 480px) {
+  .form-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .book-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .remove-btn {
+    align-self: flex-end;
+  }
+}
